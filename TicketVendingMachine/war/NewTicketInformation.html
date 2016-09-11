@@ -1,0 +1,68 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<title>Manage Ticket Information</title>
+</head>
+<body>
+
+<form role="form" action="ticketinformation" method="post">
+<fieldset>
+<legend><h3>Add Ticket Information</h3></legend>
+<div class="container">
+
+  <div class="form-group">
+    <label for="text">Add Train Number</label>
+    <input type="text" class="form-control" name="AddTItrainnumber" placeholder="Enter Train Number" required>
+    </div>
+    <div class="form-group">
+      <label for="text">Add Source Station</label>
+      <input type="text" class="form-control" name="AddTIsourcestation" placeholder="Enter Source Station" required>
+    </div>
+    <div class="form-group">
+      <label for="text">Add Destination</label>
+      <input type="text" class="form-control" name="AddTIdestination" placeholder="Enter Destination" required>
+    </div>
+    <div class="form-group">
+    <label for="text">Add Price</label>
+    <input type="text" class="form-control" name="AddTIprice" placeholder="Enter Price" required>
+    </div>
+               <button type="submit" name="AddTIbutton" value="AddTIvalue" class="btn btn-success">Add Ticket Information</button>
+</div>
+</fieldset>
+</form>
+
+
+
+<br><br>
+<form  role="form" action="ticketinformation" method="post">
+<fieldset>
+<legend><h3>Modify Ticket Information</h3></legend>
+<div class="container">
+
+    <div class="form-group">
+    <label for="text">Enter Train Number</label>
+    <input type="text" class="form-control" name="ModifyTItrainnumber" placeholder="Enter Train Number" required>
+    </div>
+     <div class="form-group">
+      <label for="text">Modify Source Station</label>
+      <input type="text" class="form-control" name="ModifyTIsourcestation" placeholder="Enter Source Station" required>
+    </div>
+    <div class="form-group">
+      <label for="text">Modify Destination</label>
+      <input type="text" class="form-control" name="ModifyTIdestination" placeholder="Enter Destination" required>
+    </div>
+    <div class="form-group">
+    <label for="text">Modify Price</label>
+    <input type="text" class="form-control" name="ModifyTIprice" placeholder="Enter Price" required>
+    </div>
+            <button type="submit" name="ModifyTIbutton" value="ModifyTIvalue" class="btn btn-success">Modify Ticket Information</button>
+</div>
+</fieldset>
+</form>
+</body>
+</html>

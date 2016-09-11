@@ -1,0 +1,60 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<title>Modify Seat Information</title>
+</head>
+<body>
+
+<form role="form" action="seatinformation" method="post">
+<fieldset>
+<legend><h3>Add Seat Information</h3></legend>
+<div class="container">
+
+    <div class="form-group">
+      <label for="text">Add Boggy Number</label>
+      <input type="text" class="form-control" name="AddSbogeynumber" placeholder="Enter Bogey Number" required>
+    </div>
+    <div class="form-group">
+      <label for="text">Add Type of Boggy</label>
+      <input type="text" class="form-control" name="AddStype" placeholder="Enter Type of Boggy" required>
+    </div>
+    <div class="form-group">
+    <label for="text">Add Number Of Seats</label>
+    <input type="text" class="form-control" name="AddSseat" placeholder="Enter Number Of Seats" required>
+    </div>
+        <button type="submit" name="AddSIbutton" value="AddSIvalue" class="btn btn-success">Add Seat Information</button>
+</div>
+</fieldset>
+</form>
+
+
+
+<br><br>
+<form  role="form" action="seatinformation" method="post">
+<fieldset>
+<legend><h3>Modify Seat Information</h3></legend>
+<div class="container">
+
+    <div class="form-group">
+      <label for="text">Add Boggy Number</label>
+      <input type="text" class="form-control" name="ModifySbogeynumber" placeholder="Enter Bogey Number" required>
+    </div>
+    <div class="form-group">
+      <label for="text">Add Type of Boggy</label>
+      <input type="text" class="form-control" name="ModifyStype" placeholder="Enter Type of Boggy" required>
+    </div>
+    <div class="form-group">
+    <label for="text">Add Number Of Seats</label>
+    <input type="text" class="form-control" name="ModifySseat" placeholder="Enter Number Of Seats" required>
+    </div>
+        <button type="submit" name="ModifySIbutton" value="ModifySIvalue" class="btn btn-success">Modify Seat Information</button>
+</div>
+</fieldset>
+</form>
+</body>
+</html>
