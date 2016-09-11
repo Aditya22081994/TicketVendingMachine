@@ -37,6 +37,10 @@ http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" version="2.5">
 	    <servlet-name>TicketInformation</servlet-name>
 	    <servlet-class>com.google.Admin.TicketInformation</servlet-class>
 	</servlet>
+	<servlet>
+	    <servlet-name>UpdateInformation</servlet-name>
+	    <servlet-class>com.google.Passenger.UpdateInformation</servlet-class>
+	</servlet>
 	
 	
 	
@@ -72,8 +76,13 @@ http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" version="2.5">
 	    <servlet-name>TicketInformation</servlet-name>
 	    <url-pattern>/ticketinformation</url-pattern>
 	</servlet-mapping>
+		<servlet-mapping>
+	    <servlet-name>UpdateInformation</servlet-name>
+	    <url-pattern>/updateinformation</url-pattern>
+	</servlet-mapping>
 	
 	
+		
 	<welcome-file-list>
 		<welcome-file>index.html</welcome-file>
 	</welcome-file-list>

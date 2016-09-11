@@ -39,13 +39,11 @@ public class PassengerValidation extends HttpServlet {
 			session.setAttribute("user", username);
 			session.setMaxInactiveInterval(30*60);
 			
-			Cookie userName = new Cookie("user", username);
+			Cookie userName = new Cookie("puser", username);
 			userName.setMaxAge(30*60);
 			response.addCookie(userName);
 			
 			response.sendRedirect("PassengerSuccessPage.jsp");
-	       
-		
 		} else {
 			response.getWriter().println("Unsuccessful LogIn");
 		}
