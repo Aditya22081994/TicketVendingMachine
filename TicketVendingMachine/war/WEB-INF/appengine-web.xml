@@ -20,6 +20,8 @@
       <include path="PassengerLogIn.html"/>
       <include path="NewSeatInformation.html"/>
       <include path="NewTicketInformation.html"/>
+      <include path="Homepage.html"/>
+      <include path="favicon.ico"/>
   </static-files>
   <!--
     HTTP Sessions are disabled by default. To enable HTTP sessions specify:

@@ -25,39 +25,30 @@ color: white;
 <body>
 <% 
         DatastoreService ds = DatastoreServiceFactory.getDatastoreService();
-        Query q = new Query("StationDetailsTable");
-       q.addSort("id",SortDirection.ASCENDING);
+        Query q = new Query("TrainScheduleTable");
        PreparedQuery pq = ds.prepare(q);         
  %>
 <div class="container-fluid">
 <table class="table table-bordered  table-condensed table-response">
 <tr>
-<td colspan="4" align="center"><h2>STATION DETAILS</h2></td>
+<td colspan="4" align="center"><h2>TRAIN SCHEDULE</h2></td>
 </tr>
  <TR>
-          <th style="width:25%">Id</th>
-          <th style="width:25%">Name</th>
-          <th style="width:25%">City</th>
-          <th style="width:25%">Station Master</th>
+          <th>Station Name</th>
+           <th>Arrival Time</th>
+            <th>Departure Time</th>
+             <th>Day</th>         
  </TR>
    <% for(Entity result: pq.asIterable()){%>
   <TR>
-            <TD> <%= result.getProperty("id") %></td>
-            <TD> <%= result.getProperty("name").toString() %></TD>
-            <TD> <%= result.getProperty("city").toString() %></TD>
-            <TD> <%= result.getProperty("stationmaster").toString() %></TD>
+            <TD> <%= result.getProperty("stationName").toString() %></td>
+            <TD> <%= result.getProperty("arrivalTime").toString() %></TD>
+            <TD> <%= result.getProperty("departureTime").toString() %></TD>
+            <TD> <%= result.getProperty("day").toString() %></TD>            
  </TR>
      <% } %> 
-<tr>
-<td>Add/Modify Station details : </td>
-<td align="center" colspan="3"><form action="NewStationDetails.jsp">
-
-<button  class="btn btn-success"  type="submit">Edit Station Details</button>
-</form>
-</td>
-</tr>
 </table>
-<a class="btn btn-primary" href="AdministratorSuccessPage.jsp" role="button">Back to HomePage</a>
+<a class="btn btn-primary" href="Homepage.html" role="button">Back to HomePage</a>
 </div>
 </body>
 </html>

@@ -13,6 +13,14 @@
   <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <title>Seat Information</title>
+<style type="text/css">
+body{
+background-color: #696969;
+}
+th,h2,td{
+color: white;
+}
+</style>
 </head>
 <body>
 <% 

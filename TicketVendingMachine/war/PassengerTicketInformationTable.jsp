@@ -12,7 +12,7 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
   <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<title>Station Details</title>
+<title>Ticket Information</title>
 <style type="text/css">
 body{
 background-color: #696969;
@@ -25,39 +25,32 @@ color: white;
 <body>
 <% 
         DatastoreService ds = DatastoreServiceFactory.getDatastoreService();
-        Query q = new Query("StationDetailsTable");
-       q.addSort("id",SortDirection.ASCENDING);
+        Query q = new Query("TicketInformationTable");
+       q.addSort("TrainNumber",SortDirection.ASCENDING);
        PreparedQuery pq = ds.prepare(q);         
  %>
 <div class="container-fluid">
 <table class="table table-bordered  table-condensed table-response">
 <tr>
-<td colspan="4" align="center"><h2>STATION DETAILS</h2></td>
+<td colspan="4" align="center"><h2>SEAT INFORMATION</h2></td>
 </tr>
  <TR>
-          <th style="width:25%">Id</th>
-          <th style="width:25%">Name</th>
-          <th style="width:25%">City</th>
-          <th style="width:25%">Station Master</th>
+          <th style="width: 25%">Train Number</th>
+           <th style="width: 25%">Source Station</th>
+            <th style="width: 25%">Destination</th>
+            <th style="width: 25%">Price</th>
+         
  </TR>
    <% for(Entity result: pq.asIterable()){%>
   <TR>
-            <TD> <%= result.getProperty("id") %></td>
-            <TD> <%= result.getProperty("name").toString() %></TD>
-            <TD> <%= result.getProperty("city").toString() %></TD>
-            <TD> <%= result.getProperty("stationmaster").toString() %></TD>
+            <TD> <%= result.getProperty("TrainNumber") %></td>
+            <TD> <%= result.getProperty("SourceStation").toString() %></TD>
+            <TD> <%= result.getProperty("DestinationStation").toString() %></TD>    
+             <TD> <%= result.getProperty("Price").toString() %></TD>       
  </TR>
      <% } %> 
-<tr>
-<td>Add/Modify Station details : </td>
-<td align="center" colspan="3"><form action="NewStationDetails.jsp">
-
-<button  class="btn btn-success"  type="submit">Edit Station Details</button>
-</form>
-</td>
-</tr>
 </table>
-<a class="btn btn-primary" href="AdministratorSuccessPage.jsp" role="button">Back to HomePage</a>
+<a class="btn btn-primary" href="Homepage.html" role="button">Back to HomePage</a>
 </div>
 </body>
 </html>
