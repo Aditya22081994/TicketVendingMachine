@@ -21,6 +21,7 @@
       <include path="NewSeatInformation.html"/>
       <include path="NewTicketInformation.html"/>
       <include path="Homepage.html"/>
+      <include path="SendEmailMessagePage.html"/>
       <include path="favicon.ico"/>
   </static-files>
   <!--

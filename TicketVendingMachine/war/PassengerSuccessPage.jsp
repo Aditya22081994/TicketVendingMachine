@@ -26,6 +26,9 @@ for(Cookie cookie : cookies){
 name = passengerName.toUpperCase();
  %>
  
+ <a href="PassengerTravelHistoryTable.jsp">PassengerTravelHistoryTable</a><br>
+ <a href="BuyingTicket.jsp">Buy Ticket</a>
+ 
  <a href="bankingofficerlogout"><%= "BankingOfficer : "+"'"+name+"'" %></a>
 <h1>Successful Log In Passenger</h1>
 </body>
