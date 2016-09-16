@@ -1,6 +1,9 @@
 package com.google.Admin;
 
 import java.io.IOException;
+
+import javax.servlet.RequestDispatcher;
+import javax.servlet.ServletException;
 import javax.servlet.http.*;
 
 import com.google.appengine.api.datastore.DatastoreService;
@@ -13,8 +16,10 @@ import com.google.appengine.api.datastore.Query.FilterPredicate;
 
 @SuppressWarnings("serial")
 public class AdminValidation extends HttpServlet {
-	public void doPost(HttpServletRequest request, HttpServletResponse response) throws IOException {
+	public void doPost(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException {
 		response.setContentType("text/html");
+		
+		RequestDispatcher rd = request.getRequestDispatcher("AdministratorSuccessPage.jsp");
 		
 		String username=request.getParameter("Ausername");
 		String password=request.getParameter("Apassword");
@@ -34,16 +39,16 @@ public class AdminValidation extends HttpServlet {
 		}
 		
 		if(password.equals(dPass)){
+			
 			HttpSession session = request.getSession();
-			session.setAttribute("user", username);
+			session.setAttribute("admin", username);
 			session.setMaxInactiveInterval(30*60);
 			
-			Cookie userName = new Cookie("user", username);
+			Cookie userName = new Cookie("admin", username);
 			userName.setMaxAge(30*60);
 			response.addCookie(userName);
 			
-			response.getWriter().println("Success");
-			response.sendRedirect("AdministratorSuccessPage.jsp");
+			rd.forward(request, response);
 	       
 		
 		} else {

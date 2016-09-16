@@ -49,6 +49,14 @@ http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" version="2.5">
 	    <servlet-name>SendEmail</servlet-name>
 	    <servlet-class>com.google.Passenger.SendEmail</servlet-class>
 	</servlet>
+	<servlet>
+	    <servlet-name>PassengerLogOut</servlet-name>
+	    <servlet-class>com.google.Passenger.PassengerLogOut</servlet-class>
+	</servlet>
+	<servlet>
+	    <servlet-name>AdministratorLogOut</servlet-name>
+	    <servlet-class>com.google.Admin.AdministratorLogOut</servlet-class>
+	</servlet>
 	
 	
 	
@@ -95,6 +103,14 @@ http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" version="2.5">
 	<servlet-mapping>
 	    <servlet-name>SendEmail</servlet-name>
 	    <url-pattern>/sendemail</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+	    <servlet-name>PassengerLogOut</servlet-name>
+	    <url-pattern>/passengerlogout</url-pattern>
+	</servlet-mapping>
+		<servlet-mapping>
+	    <servlet-name>AdministratorLogOut</servlet-name>
+	    <url-pattern>/administratorlogout</url-pattern>
 	</servlet-mapping>
 	
 	

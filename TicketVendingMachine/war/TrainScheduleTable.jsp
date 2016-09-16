@@ -15,7 +15,7 @@
 <title>Station Details</title>
 <style type="text/css">
 body{
-background-color: #696969;
+background-color: black;
 }
 th,h2,td{
 color: white;

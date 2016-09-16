@@ -15,7 +15,7 @@
 <title>Ticket Information</title>
 <style type="text/css">
 body{
-background-color: #696969;
+background-color: black;
 }
 th,h2,td{
 color: white;
@@ -32,7 +32,7 @@ color: white;
 <div class="container-fluid">
 <table class="table table-bordered  table-condensed table-response">
 <tr>
-<td colspan="4" align="center"><h2>SEAT INFORMATION</h2></td>
+<td colspan="4" align="center"><h2>TICKET INFORMATION</h2></td>
 </tr>
  <TR>
           <th style="width: 25%">Train Number</th>

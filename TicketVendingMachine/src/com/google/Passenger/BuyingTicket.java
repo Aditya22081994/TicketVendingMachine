@@ -68,10 +68,10 @@ public class BuyingTicket extends HttpServlet {
 			bSeat = Integer.parseInt(result.getProperty("No.ofSeats").toString());
 		}
 		
-		if(bSeat==0){
-			response.sendRedirect("BuyingTicket.jsp");
-               request.setAttribute("boggystatus",bSeat);
-		} else{
+		//if(bSeat==0){
+			//response.sendRedirect("BuyingTicket.jsp");
+               //request.setAttribute("boggystatus",bSeat);
+		//} else{
 		
 		request.setAttribute("ticketNumber","T"+bSeat);
 		int newSeat = bSeat-1;
@@ -83,7 +83,7 @@ public class BuyingTicket extends HttpServlet {
 		   seatinformation.setProperty("No.ofSeats",newSeat);
 		   ds.put(seatinformation);
 		   
-		}
+	//	}
 		 rd.forward(request, response);
 	}
 

@@ -11,9 +11,8 @@
 <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
   <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<title>Passenger Details</title>
+<title>Station Details</title>
 <style type="text/css">
 body{
 background-color: black;
@@ -24,37 +23,32 @@ color: white;
 </style>
 </head>
 <body>
-
 <% 
-DatastoreService ds = DatastoreServiceFactory.getDatastoreService();
-Query q = new Query("PassengerDetailsTable");
-q.addSort("date",SortDirection.ASCENDING);
-PreparedQuery pq = ds.prepare(q);  
+        DatastoreService ds = DatastoreServiceFactory.getDatastoreService();
+        Query q = new Query("TrainScheduleTable");
+       PreparedQuery pq = ds.prepare(q);         
  %>
- 
 <div class="container-fluid">
 <table class="table table-bordered  table-condensed table-response">
-<tr align="center">
-<td colspan="5" align="center"><h2>Passenger Details</h2></td>
+<tr>
+<td colspan="4" align="center"><h2>TRAIN SCHEDULE</h2></td>
 </tr>
- <tr>
-          <th>Name</th>
-          <th>Mobile No.</th> 
-          <th>Email Id</th> 
-          <th>Age</th> 
-          <th>Date</th> 
-</tr>
-   <% for(Entity result: pq.asIterable()){ %>
-  <tr>
-            <td> <%= result.getProperty("name")  %></td>
-            <td> <%= result.getProperty("mobileno")  %></td>
-            <td> <%= result.getProperty("emailid")  %></td>
-            <td> <%= result.getProperty("age")  %></td>
-            <td> <%= result.getProperty("date")  %></td>
- </tr>
+ <TR>
+          <th>Station Name</th>
+           <th>Arrival Time</th>
+            <th>Departure Time</th>
+             <th>Day</th>         
+ </TR>
+   <% for(Entity result: pq.asIterable()){%>
+  <TR>
+            <TD> <%= result.getProperty("stationName").toString() %></td>
+            <TD> <%= result.getProperty("arrivalTime").toString() %></TD>
+            <TD> <%= result.getProperty("departureTime").toString() %></TD>
+            <TD> <%= result.getProperty("day").toString() %></TD>            
+ </TR>
      <% } %> 
-</TABLE>
-<a class="btn btn-primary" href="AdministratorSuccessPage.jsp" role="button">Back to HomePage</a>
+</table>
+<a class="btn btn-primary" href="PassengerSuccessPage.jsp" role="button">Back to HomePage</a>
 </div>
 </body>
 </html>
