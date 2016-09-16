@@ -9,6 +9,15 @@
   <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <title>Manage Station Details</title>
+<style type="text/css">
+body{
+background-color: #696969;
+color: #fff;
+}
+h3{
+color: #fff;
+}
+</style>
 </head>
 <body>
 
@@ -66,5 +75,10 @@
 </div>
 </fieldset>
 </form>
+
+<div class="container-fluid">
+<br><br>
+<a class="btn btn-primary" href="StationDetailsTable.jsp" role="button">Back to Station Details </a>
+</div>
 </body>
 </html>
